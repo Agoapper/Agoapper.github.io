@@ -1,0 +1,289 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: url('wallaper.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 30px 20px;
+    animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cv-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1100px; /* Largeur de votre bande verticale */
+    
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.9), rgba(140, 75, 162, 0.9));
+    
+    border-radius: 24px;
+    padding: 40px 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px); /* Effet de flou esthétique sur l'image de fond */
+    box-sizing: border-box;
+}
+
+.top-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    width: 100%;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.introduction {
+    width: 100%;
+    max-width: 500px;
+    padding: 35px;
+    background-color: #ffffff;
+    border-radius: 16px;  
+    text-align: center;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+    box-sizing: border-box;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+.right-column {
+    flex: 1 1 420px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+}
+
+.introduction:hover, .right-column .cv_section:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 45px rgba(0,0,0,0.18);
+}
+
+.introduction img {
+    width: 140px;
+    height: 140px;
+    border: 4px solid #667eea;
+    object-fit: cover;
+    border-radius: 50%; /* Photo de profil parfaitement ronde pour un style plus pro */
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+    transition: transform 0.4s ease;
+}
+
+.introduction img:hover {
+    transform: scale(1.05);
+}
+
+.introduction h1 {
+    margin: 15px 0 5px 0;
+    font-size: 26px;
+    color: #1e293b;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.introduction p {
+    color: #64748b;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.introduction .contact h2 {
+    font-size: 1.1rem;
+    color: #471A8F;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 6px;
+}
+
+.introduction .contact p {
+    font-size: 0.9rem;
+    color: #334155;
+    margin: 8px 0;
+}
+
+.introduction .contact .reseau {
+    background: linear-gradient(135deg, #471A8F, #667eea);
+    color: #ffffff;
+    padding: 10px 22px;
+    border-radius: 20px;
+    font-size: 13px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(71, 26, 143, 0.3);
+    transition: all 0.3s ease;
+    margin-top: 5px;
+}
+
+.introduction .contact .reseau:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(71, 26, 143, 0.4);
+    filter: brightness(1.1);
+}
+
+.sections-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 900px;
+    width: 100%;
+    align-items: center;
+}
+
+.cv_section {
+    width: 100%;
+    max-width: 600px;
+    background: #ffffff;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    border-radius: 14px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.cv_section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.section_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 24px;
+    cursor: pointer;
+    user-select: none;
+    background-color: #ffffff;
+    transition: background-color 0.2s ease;
+}
+
+.section_header h2 {
+    font-family: 'Segoe UI', system-ui, sans-serif; 
+    color: #471A8F;                    
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+.section_header:hover {
+    background-color: #f8fafc;
+}
+
+.section_title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.section_title .main-icon {
+    color: #667eea;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.section_header:hover .main-icon {
+    transform: scale(1.15);
+}
+
+.arrow-icon {
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+.section_content {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1), padding 0.3s ease;
+    padding: 0 24px;
+    background-color: #fafbfc;
+}
+
+.static-header {
+    cursor: default !important;
+}
+.static-header:hover {
+    background-color: #ffffff !important;
+}
+.section_content-open {
+    padding: 0 24px 20px 24px;
+    background-color: #fafbfc;
+    border-top: 1px solid #f1f5f9;
+}
+
+.undersection {
+    margin-bottom: 18px;
+    border-bottom: 1px solid #edf2f7;
+    padding-bottom: 15px;
+}
+
+.undersection:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 5px;
+}
+
+.text-group h3 {
+    margin: 0 0 4px 0;
+    font-size: 1.05rem;
+    color: #1e293b;
+    font-weight: 600;
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.item-header h4 {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #64748b;
+    font-weight: 600;
+}
+
+.item-header span {
+    font-size: 0.8rem;
+    color: #667eea;
+    background: rgba(102, 126, 234, 0.1);
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-style: normal;
+    white-space: nowrap;
+}
+
+.undersection p {
+    margin: 4px 0 0 0;
+    font-size: 0.88rem;
+    color: #475569;
+    line-height: 1.4;
+}
+
+.cv_section.active .section_content {
+    max-height: 1200px;
+    padding: 20px 24px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.cv_section.active .arrow-icon {
+    transform: rotate(180deg);
+    color: #667eea;
+}
